@@ -1,0 +1,30 @@
+{
+  "name": "heads-up-holdem",
+  "version": "1.0.0",
+  "description": "A two-player heads-up no-limit Texas Hold'em poker game",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build": "echo 'Build complete'",
+    "test": "echo 'Tests not implemented yet'"
+  },
+  "dependencies": {
+    "ws": "^8.16.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "poker",
+    "texas-holdem",
+    "websocket",
+    "multiplayer",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT"
+}
