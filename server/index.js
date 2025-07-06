@@ -42,6 +42,10 @@ app.post('/api/create-game', (req, res) => {
   res.json({ gameCode });
 });
 
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'healthy', timestamp: new Date().toISOString() });
+});
+
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
