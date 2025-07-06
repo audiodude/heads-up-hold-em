@@ -40,17 +40,31 @@ A two-player, no-limit Texas Hold'em poker game built with Node.js, WebSockets, 
 
 ## Installation
 
+### Option 1: Local Development
 1. Clone the repository
 2. Install dependencies:
    ```bash
    npm install
    ```
 
+### Option 2: Docker Deployment
+1. Clone the repository
+2. Build and run with Docker Compose:
+   ```bash
+   docker-compose up --build
+   ```
+
 ## Usage
 
-### Start the Server
+### Local Development
 ```bash
 npm start
+```
+
+### Docker Deployment
+```bash
+docker build -t heads-up-holdem .
+docker run -p 3000:3000 heads-up-holdem
 ```
 
 The server will start on port 3000 (or the port specified in the PORT environment variable).
