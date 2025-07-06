@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heads-Up Hold'em</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="lobby" class="screen">
+      <div class="lobby-container">
+        <h1>Heads-Up Hold'em</h1>
+        <div class="lobby-actions">
+          <button id="create-game-btn" class="btn btn-primary">Create Game</button>
+          <div class="join-game-section">
+            <input type="text" id="game-code-input" placeholder="Enter game code" maxlength="6">
+            <button id="join-game-btn" class="btn btn-secondary">Join Game</button>
+          </div>
+        </div>
+        <div id="lobby-message" class="message"></div>
+        <div id="copy-code-section" class="copy-section hidden">
+          <div class="game-code-share">
+            <span id="created-game-code" class="game-code-text"></span>
+            <button id="copy-code-btn" class="btn btn-success">Copy Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="game" class="screen hidden">
+      <div class="game-container">
+        <div class="game-header">
+          <div class="game-info">
+            <span id="game-code-display">Game: </span>
+            <span id="pot-display">Pot: $0</span>
+            <span id="phase-display">Phase: Waiting</span>
+          </div>
+          <button id="resign-btn" class="btn btn-danger">Resign</button>
+        </div>
+
+        <div class="game-table">
+          <div class="opponent-area">
+            <div class="player-info">
+              <span id="opponent-name">Opponent</span>
+              <span id="opponent-chips">$20,000</span>
+            </div>
+            <div class="player-cards">
+              <div class="card card-back"></div>
+              <div class="card card-back"></div>
+            </div>
+            <div id="opponent-bet" class="bet-display">$0</div>
+          </div>
+
+          <div class="community-cards">
+            <div id="community-card-1" class="card community-card"></div>
+            <div id="community-card-2" class="card community-card"></div>
+            <div id="community-card-3" class="card community-card"></div>
+            <div id="community-card-4" class="card community-card"></div>
+            <div id="community-card-5" class="card community-card"></div>
+          </div>
+
+          <div class="player-area">
+            <div class="player-info">
+              <span id="player-name">You</span>
+              <span id="player-chips">$20,000</span>
+            </div>
+            <div class="player-cards">
+              <div id="hole-card-1" class="card"></div>
+              <div id="hole-card-2" class="card"></div>
+            </div>
+            <div id="player-bet" class="bet-display">$0</div>
+          </div>
+        </div>
+
+        <div class="action-panel">
+          <div class="betting-controls">
+            <button id="fold-btn" class="btn btn-danger">Fold</button>
+            <button id="check-btn" class="btn btn-secondary">Check</button>
+            <button id="call-btn" class="btn btn-primary">Call $0</button>
+            <button id="bet-btn" class="btn btn-success">Bet</button>
+            <button id="raise-btn" class="btn btn-warning">Raise</button>
+            <button id="all-in-btn" class="btn btn-danger">All In</button>
+          </div>
+          <div class="bet-amount-controls">
+            <button id="half-pot-btn" class="btn btn-info bet-size-btn">1/2 Pot</button>
+            <button id="full-pot-btn" class="btn btn-info bet-size-btn">Full Pot</button>
+            <div class="slider-container">
+              <input type="range" id="bet-slider" min="50" max="500" step="50" value="100">
+              <div class="slider-labels">
+                <span>$50</span>
+                <span>1/2 Pot</span>
+              </div>
+            </div>
+            <input type="number" id="bet-input" min="0" max="1000" value="100">
+            <span id="bet-amount-display">$100</span>
+          </div>
+        </div>
+
+        <div id="game-messages" class="message-area"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
