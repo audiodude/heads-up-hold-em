@@ -148,8 +148,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Package managers
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
