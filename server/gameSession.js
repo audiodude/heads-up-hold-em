@@ -116,7 +116,7 @@ export class GameSession {
 
   startBettingRound() {
     if (this.currentHand.phase === 'preflop') {
-      this.currentHand.currentPlayer = 1 - this.currentHand.dealerIndex;
+      this.currentHand.currentPlayer = this.currentHand.dealerIndex;
     } else {
       this.currentHand.currentPlayer = this.currentHand.dealerIndex;
       // Only reset bets for post-flop rounds (blinds should persist preflop)
